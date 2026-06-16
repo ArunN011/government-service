@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>404 - Page Not Found</title>
+  <style>
+  
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+
+background:
+linear-gradient(
+135deg,
+#f8fafc,
+#e0e7ff
+);
+
+overflow:hidden;
+position:relative;
+}
+
+
+body::before,
+body::after{
+content:"";
+position:absolute;
+border-radius:50%;
+filter:blur(80px);
+z-index:0;
+}
+
+body::before{
+width:350px;
+height:350px;
+background:#60a5fa;
+top:-100px;
+left:-100px;
+opacity:.3;
+}
+
+body::after{
+width:300px;
+height:300px;
+background:#8b5cf6;
+bottom:-100px;
+right:-100px;
+opacity:.25;
+}
+
+
+
+.error-card{
+
+position:relative;
+z-index:2;
+
+width:100%;
+max-width:700px;
+
+background:rgba(255,255,255,.7);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.4);
+
+padding:50px;
+
+border-radius:30px;
+
+text-align:center;
+
+box-shadow:
+0 25px 60px rgba(0,0,0,.08);
+}
+
+
+
+.error-code{
+
+font-size:120px;
+font-weight:700;
+
+line-height:1;
+
+background:
+linear-gradient(
+135deg,
+#2563eb,
+#7c3aed
+);
+
+-webkit-background-clip:text;
+background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:float 3s infinite;
+}
+
+@keyframes float{
+
+50%{
+transform:translateY(-8px);
+}
+
+}
+
+.error-card h2{
+font-size:34px;
+margin:15px 0;
+color:#0f172a;
+}
+
+.error-card p{
+color:#64748b;
+line-height:1.8;
+margin-bottom:25px;
+}
+
+
+
+.search-box{
+display:flex;
+gap:10px;
+margin-bottom:25px;
+}
+
+.search-box input{
+
+flex:1;
+
+padding:14px;
+
+border:none;
+
+border-radius:12px;
+
+background:#fff;
+
+outline:none;
+}
+
+.search-box button{
+
+padding:14px 22px;
+
+border:none;
+
+border-radius:12px;
+
+background:#2563eb;
+
+color:#fff;
+
+cursor:pointer;
+}
+
+
+.action-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+
+padding:14px 24px;
+
+border-radius:12px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+}
+
+.btn-primary{
+background:#2563eb;
+color:#fff;
+}
+
+.btn-primary:hover{
+transform:translateY(-4px);
+}
+
+.btn-secondary{
+background:#fff;
+color:#0f172a;
+}
+
+.btn-secondary:hover{
+transform:translateY(-4px);
+}
+
+
+@media(max-width:768px){
+
+.error-card{
+padding:35px 25px;
+}
+
+.error-code{
+font-size:80px;
+}
+
+.error-card h2{
+font-size:24px;
+}
+
+.search-box{
+flex-direction:column;
+}
+
+.search-box button{
+width:100%;
+}
+
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="error-card">
+
+<div class="error-code">404</div>
+
+<h2>Government Service Not Found</h2>
+
+<p>
+The service, application, or page you are looking for
+may have been moved, removed, or is temporarily unavailable.
+</p>
+
+<div class="search-box">
+<input type="text" placeholder="Search Government Services">
+<button>Search</button>
+</div>
+
+<div class="action-buttons">
+
+<a href="index2.html" class="btn btn-primary">
+Go Home
+</a>
+
+
+</div>
+
+</div>
+</body>
+</html>

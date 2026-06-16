@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Governance Services Website</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+
+ 
+  <link rel="stylesheet" href="./css/scheme.css">
+</head>
+<body>
+
+
+<div id="loginModal" class="login-modal">
+
+  <div class="login-box">
+    <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+  
+    <h2 id="formTitle">Citizen Services Portal Login</h2>
+    <p id="formSubtitle">Access government services, applications & public records</p>
+
+    <form id="authForm" onsubmit="handleAuthSubmit(event)">
+
+      <input type="text"
+             id="departmentName"
+             placeholder="Department / Organization Name"
+             style="display:none;">
+
+      
+      <input type="email"
+             placeholder="Registered Email Address"
+             required>
+
+      <input type="text"
+             placeholder="Citizen ID / Application Number"
+             required>
+
+     
+      <div class="password-field">
+        <input type="password"
+               id="loginPassword"
+               placeholder="Portal Password"
+               required>
+
+        <i class="fa-solid fa-eye-slash toggle-eye"
+           id="eyeIcon"
+           onclick="togglePassword()"></i>
+      </div>
+
+      <input type="password"
+             id="confirmPassword"
+             placeholder="Confirm Password"
+             style="display:none;">
+
+      <button type="submit"
+              class="login-submit"
+              id="submitBtn">
+        Access Portal
+      </button>
+
+    </form>
+
+    <p class="switch-text">
+      <span id="switchText">New to the citizen services portal?</span>
+      <a href="javascript:void(0)" onclick="toggleAuth()">Create account</a>
+    </p>
+
+  </div>
+
+</div>
+
+
+<header>
+  <nav class="navbar">
+
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="index2.html">
+          <img src="./images/stackly_logo.webp" class="logo-img" alt="logo">
+        </a>
+      </div>
+
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+
+    <ul class="nav__links" id="nav-links">
+      <li class="dropdown">
+        <a href="index2.html">Home</a>
+        <i class="ri-arrow-down-s-line arrow"></i>
+        <ul class="dropdown-menu">
+          <li><a href="index.html">Home Page 1</a></li>
+        </ul>
+      </li>
+
+      <li><a href="service.html">Service</a></li>
+      <li><a href="scheme.html">Schemes</a></li>
+      <li><a href="contact2.html">Contact</a></li>
+            <li>
+  <a href="javascript:void(0)" onclick="openLogin()">
+    Login
+  </a>
+</li>
+    </ul>
+
+  </nav>
+</header>
+
+
+<section class="about-hero">
+
+
+  <img src="images/about_video.gif" class="hero-bg" alt="City Economy">
+
+  <div class="hero-overlay"></div>
+
+<div class="hero-content">
+  <span class="hero-breadcrumb">
+    <a href="index2.html">Home</a> / Scheme
+  </span>
+
+<h1>Government Schemes</h1>
+
+<p>
+Discover public schemes and development programs
+created to support citizens, promote growth, and improve
+community well-being.
+</p>
+</div>
+
+</section>
+
+<section class="schemes-hero">
+
+<div class="schemes-box">
+
+<h1>Government Welfare Schemes</h1>
+
+<p>
+This section provides comprehensive information about government welfare
+schemes created to support citizens across India. Explore initiatives
+focused on healthcare, education, employment, housing, and financial
+assistance. Learn about eligibility criteria, application procedures,
+and the benefits offered by each program to help improve the quality
+of life for individuals and communities.
+</p>
+
+</div>
+
+</section>
+
+<section class="scheme-category">
+
+
+  <div class="scheme-header">
+
+    <span class="scheme-tag">
+      <i class="ri-government-line"></i>
+      Government Welfare Programs
+    </span>
+
+    <h2>Find Schemes by Category</h2>
+
+    <p>
+      Explore government welfare programs, citizen services,
+      financial assistance, healthcare benefits, education support,
+      employment opportunities and development initiatives.
+    </p>
+
+  </div>
+
+
+ 
+
+  <div class="category-grid">
+
+
+    <a href="home2_404.html" class="scheme-card">
+
+      <div class="scheme-top">
+
+        <div class="scheme-icon agriculture">
+          <i class="ri-plant-line"></i>
+        </div>
+
+        <span class="scheme-badge">
+          24 Active Schemes
+        </span>
+
+      </div>
+
+      <h3>Agriculture & Rural Development</h3>
+
+      <p>
+        Crop insurance, irrigation support, farmer welfare
+        programs and environmental initiatives.
+      </p>
+
+      <div class="scheme-footer">
+        <span>
+          <i class="ri-user-line"></i>
+          Farmers
+        </span>
+
+        <span>
+          Explore
+          <i class="ri-arrow-right-line"></i>
+        </span>
+      </div>
+
+    </a>
+
+
+   
+
+    <a href="home2_404.html" class="scheme-card">
+
+      <div class="scheme-top">
+
+        <div class="scheme-icon education">
+          <i class="ri-book-open-line"></i>
+        </div>
+
+        <span class="scheme-badge">
+          18 Scholarships
+        </span>
+
+      </div>
+
+      <h3>Education & Scholarships</h3>
+
+      <p>
+        Student scholarships, digital learning support
+        and higher education assistance programs.
+      </p>
+
+      <div class="scheme-footer">
+        <span>
+          <i class="ri-graduation-cap-line"></i>
+          Students
+        </span>
+
+        <span>
+          Explore
+          <i class="ri-arrow-right-line"></i>
+        </span>
+      </div>
+
+    </a>
+
+
+  
+
+    <a href="home2_404.html" class="scheme-card">
+
+      <div class="scheme-top">
+
+        <div class="scheme-icon health">
+          <i class="ri-heart-pulse-line"></i>
+        </div>
+
+        <span class="scheme-badge">
+          15 Health Programs
+        </span>
+
+      </div>
+
+      <h3>Healthcare & Insurance</h3>
+
+      <p>
+        Free healthcare schemes, insurance coverage
+        and family welfare programs.
+      </p>
+
+      <div class="scheme-footer">
+        <span>
+          <i class="ri-group-line"></i>
+          Families
+        </span>
+
+        <span>
+          Explore
+          <i class="ri-arrow-right-line"></i>
+        </span>
+      </div>
+
+    </a>
+
+
+
+
+    <a href="home2_404.html" class="scheme-card">
+
+      <div class="scheme-top">
+
+        <div class="scheme-icon business">
+          <i class="ri-briefcase-line"></i>
+        </div>
+
+        <span class="scheme-badge">
+          12 Startup Programs
+        </span>
+
+      </div>
+
+      <h3>Business & Startups</h3>
+
+      <p>
+        MSME funding, startup incentives,
+        entrepreneur support and innovation grants.
+      </p>
+
+      <div class="scheme-footer">
+        <span>
+          <i class="ri-store-2-line"></i>
+          Entrepreneurs
+        </span>
+
+        <span>
+          Explore
+          <i class="ri-arrow-right-line"></i>
+        </span>
+      </div>
+
+    </a>
+
+
+  
+
+    <a href="home2_404.html" class="scheme-card">
+
+      <div class="scheme-top">
+
+        <div class="scheme-icon housing">
+          <i class="ri-building-line"></i>
+        </div>
+
+        <span class="scheme-badge">
+          10 Housing Schemes
+        </span>
+
+      </div>
+
+      <h3>Housing & Urban Development</h3>
+
+      <p>
+        Affordable housing initiatives,
+        property support and urban planning services.
+      </p>
+
+      <div class="scheme-footer">
+        <span>
+          <i class="ri-home-heart-line"></i>
+          Citizens
+        </span>
+
+        <span>
+          Explore
+          <i class="ri-arrow-right-line"></i>
+        </span>
+      </div>
+
+    </a>
+
+
+
+    <a href="home2_404.html" class="scheme-card">
+
+      <div class="scheme-top">
+
+        <div class="scheme-icon transport">
+          <i class="ri-bus-line"></i>
+        </div>
+
+        <span class="scheme-badge">
+          8 Public Benefits
+        </span>
+
+      </div>
+
+      <h3>Transport & Mobility</h3>
+
+      <p>
+        Travel subsidies, transport welfare,
+        road safety and mobility initiatives.
+      </p>
+
+      <div class="scheme-footer">
+        <span>
+          <i class="ri-steering-2-line"></i>
+          Drivers
+        </span>
+
+        <span>
+          Explore
+          <i class="ri-arrow-right-line"></i>
+        </span>
+      </div>
+
+    </a>
+
+
+
+
+    <a href="home2_404.html" class="scheme-card">
+
+      <div class="scheme-top">
+
+        <div class="scheme-icon business">
+          <i class="ri-women-line"></i>
+        </div>
+
+        <span class="scheme-badge">
+          14 Welfare Programs
+        </span>
+
+      </div>
+
+      <h3>Women Empowerment</h3>
+
+      <p>
+        Self-employment support, entrepreneurship
+        assistance and welfare initiatives.
+      </p>
+
+      <div class="scheme-footer">
+        <span>
+          <i class="ri-user-heart-line"></i>
+          Women
+        </span>
+
+        <span>
+          Explore
+          <i class="ri-arrow-right-line"></i>
+        </span>
+      </div>
+
+    </a>
+
+
+
+    <a href="home2_404.html" class="scheme-card">
+
+      <div class="scheme-top">
+
+        <div class="scheme-icon transport">
+          <i class="ri-user-star-line"></i>
+        </div>
+
+        <span class="scheme-badge">
+          9 Benefits
+        </span>
+
+      </div>
+
+      <h3>Senior Citizen Welfare</h3>
+
+      <p>
+        Pension schemes, healthcare support
+        and senior citizen assistance programs.
+      </p>
+
+      <div class="scheme-footer">
+        <span>
+          <i class="ri-parent-line"></i>
+          Seniors
+        </span>
+
+        <span>
+          Explore
+          <i class="ri-arrow-right-line"></i>
+        </span>
+      </div>
+
+    </a>
+
+  </div>
+
+
+  <div class="scheme-bottom">
+
+    <a href="home2_404.html" class="scheme-btn">
+      View All Government Schemes
+      <i class="ri-arrow-right-line"></i>
+    </a>
+
+  </div>
+
+</section>
+
+<section class="gov-ministry">
+
+  <div class="ministry-header">
+
+    <span class="ministry-tag">
+      <i class="ri-government-line"></i>
+      Government Departments
+    </span>
+
+    <h2>Central & State Government Schemes</h2>
+
+    <p>
+      Explore welfare programs, subsidies, citizen services and
+      government initiatives managed by various ministries.
+    </p>
+
+  </div>
+
+  <div class="ministry-grid">
+
+
+    <div class="ministry-card">
+      <div class="ministry-icon">
+        <i class="ri-team-line"></i>
+      </div>
+
+      <h3>Social Justice</h3>
+
+      <p>
+        Welfare schemes for senior citizens,
+        disabled persons and marginalized communities.
+      </p>
+
+      <div class="ministry-footer">
+        <span>32 Schemes</span>
+        <a href="home2_404.html">Explore</a>
+      </div>
+    </div>
+
+    <div class="ministry-card">
+      <div class="ministry-icon education">
+        <i class="ri-book-open-line"></i>
+      </div>
+
+      <h3>Education</h3>
+
+      <p>
+        Scholarships, skill development,
+        digital learning and student benefits.
+      </p>
+
+      <div class="ministry-footer">
+        <span>28 Schemes</span>
+        <a href="home2_404.html">Explore</a>
+      </div>
+    </div>
+
+    <div class="ministry-card">
+      <div class="ministry-icon agriculture">
+        <i class="ri-plant-line"></i>
+      </div>
+
+      <h3>Agriculture</h3>
+
+      <p>
+        Farmer welfare, irrigation support,
+        crop insurance and subsidies.
+      </p>
+
+      <div class="ministry-footer">
+        <span>24 Schemes</span>
+        <a href="home2_404.html">Explore</a>
+      </div>
+    </div>
+
+    <div class="ministry-card">
+      <div class="ministry-icon health">
+        <i class="ri-heart-pulse-line"></i>
+      </div>
+
+      <h3>Health & Family Welfare</h3>
+
+      <p>
+        Insurance programs, medical support
+        and healthcare initiatives.
+      </p>
+
+      <div class="ministry-footer">
+        <span>18 Schemes</span>
+        <a href="home2_404.html">Explore</a>
+      </div>
+    </div>
+
+    <div class="ministry-card">
+      <div class="ministry-icon finance">
+        <i class="ri-bank-card-line"></i>
+      </div>
+
+      <h3>Finance</h3>
+
+      <p>
+        Tax benefits, financial inclusion,
+        pension and citizen support programs.
+      </p>
+
+      <div class="ministry-footer">
+        <span>21 Schemes</span>
+        <a href="home2_404.html">Explore</a>
+      </div>
+    </div>
+
+    <div class="ministry-card">
+      <div class="ministry-icon industry">
+        <i class="ri-briefcase-line"></i>
+      </div>
+
+      <h3>Commerce & Industry</h3>
+
+      <p>
+        MSME support, startup funding,
+        industrial growth initiatives.
+      </p>
+
+      <div class="ministry-footer">
+        <span>16 Schemes</span>
+        <a href="home2_404.html">Explore</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="view-all-wrap">
+    <a href="home2_404.html" class="view-all-btn">
+      View All Ministries
+      <i class="ri-arrow-right-line"></i>
+    </a>
+  </div>
+
+</section>
+
+<footer class="gov-footer">
+
+  <div class="footer-container">
+
+    <!-- ABOUT CITY -->
+    <div class="footer-col">
+        <div class="footer-logo">
+    <img src="./images/stackly_logo.webp" alt="Stackly Logo">
+  </div>
+      <p>
+        Serving the citizens with transparency and dedication.
+        Providing essential civic services, public welfare programs,
+        and smart city initiatives for sustainable development.
+      </p>
+    </div>
+
+  
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index2.html">Home</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="scheme.html">Schemes</a></li>
+        <li><a href="contact2.html">Contact</a></li>
+      </ul>
+    </div>
+
+
+<div class="footer-col">
+  <h4>Follow Us</h4>
+  <ul class="social-links">
+    <li>
+      <a href="home2_404.html"><i class="ri-facebook-fill"></i> Facebook</a>
+    </li>
+    <li>
+      <a href="home2_404.html"><i class="ri-twitter-x-line"></i> Twitter</a>
+    </li>
+    <li>
+      <a href="home2_404.html"><i class="ri-instagram-line"></i> Instagram</a>
+    </li>
+    <li>
+      <a href="home2_404.html"><i class="ri-linkedin-fill"></i> LinkedIn</a>
+    </li>
+    <li>
+      <a href="home2_404.html"><i class="ri-youtube-fill"></i> YouTube</a>
+    </li>
+  </ul>
+</div>
+
+    
+    <div class="footer-col">
+      <h4>City Services</h4>
+      <ul>
+        <li><a href="home2_404.html">Property Tax</a></li>
+        <li><a href="home2_404.html">Water & Sewerage</a></li>
+        <li><a href="home2_404.html">Public Health</a></li>
+        <li><a href="home2_404.html">Urban Planning</a></li>
+        <li><a href="home2_404.html">Birth & Death Certificates</a></li>
+      </ul>
+    </div>
+
+
+    <div class="footer-col">
+      <h4>Find Us</h4>
+      <div class="map-box">
+        <iframe 
+          src="https://www.google.com/maps?q=Chennai%20Corporation%20Office&output=embed"
+          width="100%" 
+          height="150" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+
+    <div class="footer-bottom">
+    <p>&copy; 2026 Chennai City Corporation | All Rights Reserved</p>
+  </div>
+
+</footer>
+<script src="./js/script.js"></script>
+</body>
+</html>

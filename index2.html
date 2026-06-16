@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Governance Services Website</title>
+
+  <!-- GOOGLE FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- REMIX ICON -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style2.css">
+</head>
+<body>
+
+<!-- LOGIN MODAL -->
+<div id="loginModal" class="login-modal">
+
+  <div class="login-box">
+    <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+    <!-- TITLE -->
+    <h2 id="formTitle">Citizen Services Portal Login</h2>
+    <p id="formSubtitle">Access government services, applications & public records</p>
+
+    <form id="authForm" onsubmit="handleAuthSubmit(event)">
+
+    
+      <input type="text"
+             id="departmentName"
+             placeholder="Department / Organization Name"
+             style="display:none;">
+
+     
+      <input type="email"
+             placeholder="Registered Email Address"
+             required>
+
+      <input type="text"
+             placeholder="Citizen ID / Application Number"
+             required>
+
+    
+      <div class="password-field">
+        <input type="password"
+               id="loginPassword"
+               placeholder="Portal Password"
+               required>
+
+        <i class="fa-solid fa-eye-slash toggle-eye"
+           id="eyeIcon"
+           onclick="togglePassword()"></i>
+      </div>
+
+      <input type="password"
+             id="confirmPassword"
+             placeholder="Confirm Password"
+             style="display:none;">
+
+      <button type="submit"
+              class="login-submit"
+              id="submitBtn">
+        Access Portal
+      </button>
+
+    </form>
+
+  
+    <p class="switch-text">
+      <span id="switchText">New to the citizen services portal?</span>
+      <a href="javascript:void(0)" onclick="toggleAuth()">Create account</a>
+    </p>
+
+  </div>
+
+</div>
+
+
+
+<header>
+  <nav class="navbar">
+
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="index2.html">
+          <img src="./images/stackly_logo.webp" class="logo-img" alt="logo">
+        </a>
+      </div>
+
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+
+    <ul class="nav__links" id="nav-links">
+      <li class="dropdown">
+        <a href="index2.html">Home</a>
+        <i class="ri-arrow-down-s-line arrow"></i>
+        <ul class="dropdown-menu">
+          <li><a href="index.html">Home Page 1</a></li>
+        </ul>
+      </li>
+
+      <li><a href="service.html">Service</a></li>
+      <li><a href="scheme.html">Schemes</a></li>
+      <li><a href="contact2.html">Contact</a></li>
+            <li>
+  <a href="javascript:void(0)" onclick="openLogin()">
+    Login
+  </a>
+</li>
+    </ul>
+
+  </nav>
+</header>
+
+<section class="hero">
+
+  
+  <img 
+    src="./images/home2_hero_video.gif" 
+    alt="Chennai Government Services Background"
+    class="hero-gif"
+  >
+
+
+  <div class="hero-overlay"></div>
+
+
+ <div class="hero-content">
+
+  <h1 class="reveal delay-1">
+    Building <span>Smart & Transparent Governance</span>
+  </h1>
+
+  <h3 class="reveal delay-2">
+    Digital Services for Citizens, Businesses & Communities
+  </h3>
+
+<p class="reveal delay-3">
+Delivering transparent, efficient, and citizen-focused digital services
+to support smart governance
+</p>
+
+</div>
+
+</section>
+
+<section class="governance-section">
+
+<div class="gov-header">
+<span class="gov-tag">GOVERNANCE & ADMINISTRATION</span>
+<h2>Explore City Governance</h2>
+</div>
+
+<div class="gov-cards">
+
+
+<div class="gov-card">
+<img src="./images/about4.webp" alt="">
+<div class="gov-box">
+<i class="ri-government-line"></i>
+<h4>City Governance</h4>
+<p>Administration</p>
+</div>
+</div>
+
+
+<div class="gov-card">
+<img src="images/home2_image2.webp" alt="">
+<div class="gov-box">
+<i class="ri-community-line"></i>
+<h4>Public Services</h4>
+<p>Citizen Programs</p>
+</div>
+</div>
+
+
+<div class="gov-card">
+<img src="images/home2_image1.webp" alt="">
+<div class="gov-box">
+<i class="ri-file-chart-line"></i>
+<h4>Budget & Policy</h4>
+<p>City Development</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="gov-news-section">
+
+<div class="section-header">
+
+<div>
+<span class="section-tag">
+<i class="ri-government-line"></i>
+Latest Updates
+</span>
+
+<h2>Government News & Initiatives</h2>
+
+<p>
+Stay informed about governance programs, public services,
+and city development initiatives.
+</p>
+</div>
+
+<a href="home2_404.html" class="view-all-btn">
+View All News
+<i class="ri-arrow-right-line"></i>
+</a>
+
+</div>
+
+
+<div class="news-grid">
+
+<div class="news-card">
+
+<div class="news-image">
+
+<img src="images/gif1.gif">
+
+<div class="news-badge">
+Portal Launch
+</div>
+
+</div>
+
+<div class="news-content">
+
+<span class="news-date">
+<i class="ri-calendar-line"></i>
+APR 12, 2024
+</span>
+
+<h4>
+Citizen Grievance Portal
+</h4>
+
+<p>
+Municipal Corporation launches new citizen grievance portal.
+</p>
+
+</div>
+
+</div>
+
+<div class="news-card">
+
+<div class="news-image">
+
+<img src="images/gif2.gif">
+
+<div class="news-badge">
+Smart Traffic
+</div>
+
+</div>
+
+<div class="news-content">
+
+<span class="news-date">
+<i class="ri-calendar-line"></i>
+MAY 03, 2024
+</span>
+
+<h4>
+Traffic Management
+</h4>
+
+<p>
+City council approves smart traffic management initiative.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="news-card">
+
+<div class="news-image">
+
+<img src="images/gif3.gif">
+
+<div class="news-badge">
+Infrastructure
+</div>
+
+</div>
+
+<div class="news-content">
+
+<span class="news-date">
+<i class="ri-calendar-line"></i>
+JUN 18, 2024
+</span>
+
+<h4>
+Urban Development
+</h4>
+
+<p>
+Mayor announces new urban development projects.
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="featured-news">
+
+<div class="featured-label">
+Featured Initiative
+</div>
+
+<div class="featured-slider">
+
+<div class="featured-card slide active">
+
+<img src="images/news1.webp">
+
+<div class="featured-content">
+
+<h3>Digital Governance Initiative</h3>
+
+<p>
+Improving transparency and citizen engagement through digital services.
+</p>
+
+</div>
+
+</div>
+
+<div class="featured-card slide">
+
+<img src="images/news2.webp">
+
+<div class="featured-content">
+
+<h3>Smart City Infrastructure</h3>
+
+<p>
+Developing modern urban infrastructure for sustainable growth.
+</p>
+
+</div>
+
+
+</div>
+
+<div class="featured-card slide">
+
+<img src="images/new3.webp">
+
+<div class="featured-content">
+
+<h3>Public Service Portal</h3>
+
+<p>
+Faster and more efficient government service delivery.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+</section>
+
+<section class="gov-quick-links">
+
+<div class="section-head">
+  <span>Government Services</span>
+  <h2>Quick Access Portal</h2>
+  <p>Access frequently used citizen services and government resources.</p>
+</div>
+
+<div class="quick-grid">
+
+  <div class="service-card">
+    <img src="images/service1.webp">
+    <div class="service-content">
+      <div class="service-icon">
+        <i class="ri-shield-check-line"></i>
+      </div>
+      <h4>Insurance Administration</h4>
+      <p>Regulating motor insurance industry and protecting consumers.</p>
+      <a href="home2_404.html">Explore <i class="ri-arrow-right-line"></i></a>
+    </div>
+  </div>
+
+  <div class="service-card">
+    <img src="images/service2.webp">
+    <div class="service-content">
+      <div class="service-icon">
+        <i class="ri-bank-card-line"></i>
+      </div>
+      <h4>Tax Payment</h4>
+      <p>Submit tax payments and access records online.</p>
+      <a href="home2_404.html">Explore <i class="ri-arrow-right-line"></i></a>
+    </div>
+  </div>
+
+  <div class="service-card">
+    <img src="images/service3.webp">
+    <div class="service-content">
+      <div class="service-icon">
+        <i class="ri-bus-line"></i>
+      </div>
+      <h4>Free Bus Fare</h4>
+      <p>Transport support for senior citizens and disabled persons.</p>
+      <a href="home2_404.html">Explore <i class="ri-arrow-right-line"></i></a>
+    </div>
+  </div>
+
+  <div class="service-card">
+    <img src="images/service4.webp">
+    <div class="service-content">
+      <div class="service-icon">
+        <i class="ri-car-line"></i>
+      </div>
+      <h4>Vehicle Tracking</h4>
+      <p>Track impounded vehicles using VTS services.</p>
+      <a href="home2_404.html">Explore <i class="ri-arrow-right-line"></i></a>
+    </div>
+  </div>
+
+  <div class="service-card">
+    <img src="images/service5.webp">
+    <div class="service-content">
+      <div class="service-icon">
+        <i class="ri-alarm-warning-line"></i>
+      </div>
+      <h4>Emergency Response</h4>
+      <p>Fast response during disasters and critical incidents.</p>
+      <a href="home2_404.html">Explore <i class="ri-arrow-right-line"></i></a>
+    </div>
+  </div>
+
+  <div class="service-card">
+    <img src="images/service6.webp">
+    <div class="service-content">
+      <div class="service-icon">
+        <i class="ri-auction-line"></i>
+      </div>
+      <h4>Auction Services</h4>
+      <p>Government auction listings and bidding opportunities.</p>
+      <a href="home2_404.html">Explore <i class="ri-arrow-right-line"></i></a>
+    </div>
+  </div>
+
+</div>
+
+<div class="resource-panel">
+
+<h3>Popular Resources</h3>
+
+<div class="resource-links">
+
+<a href="home2_404.html"><i class="ri-bar-chart-box-line"></i> CountyStat</a>
+
+<a href="home2_404.html"><i class="ri-money-dollar-circle-line"></i> Spending Disclosure</a>
+
+<a href="home2_404.html"><i class="ri-customer-service-2-line"></i> Consumer Protection</a>
+
+<a href="home2_404.html"><i class="ri-government-line"></i> Legislative Information</a>
+
+<a href="home2_404.html"><i class="ri-map-2-line"></i> County Maps</a>
+
+<a href="home2_404.html"><i class="ri-road-map-line"></i> Road Tracking</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="gov-footer">
+
+  <div class="footer-container">
+
+   
+    <div class="footer-col">
+        <div class="footer-logo">
+    <img src="./images/stackly_logo.webp" alt="Stackly Logo">
+  </div>
+      <p>
+        Serving the citizens with transparency and dedication.
+        Providing essential civic services, public welfare programs,
+        and smart city initiatives for sustainable development.
+      </p>
+    </div>
+
+    
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index2.html">Home</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="scheme.html">Schemes</a></li>
+        <li><a href="contact2.html">Contact</a></li>
+      </ul>
+    </div>
+
+<div class="footer-col">
+  <h4>Follow Us</h4>
+  <ul class="social-links">
+    <li>
+      <a href="home2_404.html"><i class="ri-facebook-fill"></i> Facebook</a>
+    </li>
+    <li>
+      <a href="home2_404.html"><i class="ri-twitter-x-line"></i> Twitter</a>
+    </li>
+    <li>
+      <a href="home2_404.html"><i class="ri-instagram-line"></i> Instagram</a>
+    </li>
+    <li>
+      <a href="home2_404.html"><i class="ri-linkedin-fill"></i> LinkedIn</a>
+    </li>
+    <li>
+      <a href="home2_404.html"><i class="ri-youtube-fill"></i> YouTube</a>
+    </li>
+  </ul>
+</div>
+
+    <div class="footer-col">
+      <h4>City Services</h4>
+      <ul>
+        <li><a href="home2_404.html">Property Tax</a></li>
+        <li><a href="home2_404.html">Water & Sewerage</a></li>
+        <li><a href="home2_404.html">Public Health</a></li>
+        <li><a href="home2_404.html">Urban Planning</a></li>
+        <li><a href="home2_404.html">Birth & Death Certificates</a></li>
+      </ul>
+    </div>
+
+
+    <div class="footer-col">
+      <h4>Find Us</h4>
+      <div class="map-box">
+        <iframe 
+          src="https://www.google.com/maps?q=Chennai%20Corporation%20Office&output=embed"
+          width="100%" 
+          height="150" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Chennai City Corporation | All Rights Reserved</p>
+  </div>
+
+</footer>
+<script>
+
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+
+let currentSlide = 0;
+
+function showSlide(index){
+
+slides.forEach((slide) => {
+slide.classList.remove("active");
+});
+
+dots.forEach((dot) => {
+dot.classList.remove("active");
+});
+
+slides[index].classList.add("active");
+dots[index].classList.add("active");
+
+}
+
+
+function nextSlide(){
+
+currentSlide++;
+
+if(currentSlide >= slides.length){
+currentSlide = 0;
+}
+
+showSlide(currentSlide);
+
+}
+
+
+
+
+setInterval(nextSlide,3000);
+
+
+
+
+dots.forEach((dot,index)=>{
+dot.addEventListener("click",()=>{
+currentSlide=index;
+showSlide(currentSlide);
+});
+});
+const slides1 =
+document.querySelectorAll(".slide");
+
+const dots1 =
+document.querySelectorAll(".dot");
+
+let current = 0;
+
+function showSlide(index){
+
+slides1.forEach(slide=>
+slide.classList.remove("active"));
+
+dots1.forEach(dot=>
+dot.classList.remove("active"));
+
+slides1[index].classList.add("active");
+dots1[index].classList.add("active");
+
+}
+
+setInterval(()=>{
+
+current++;
+
+if(current >= slides1.length){
+current = 0;
+}
+
+showSlide(current);
+
+},4000);
+
+</script>
+<script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 - Government Service Portal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+background:
+linear-gradient(
+135deg,
+#001f3f,
+#003566,
+#00509d
+);
+position:relative;
+}
+
+body::before{
+content:"";
+position:absolute;
+width:700px;
+height:700px;
+background:rgba(255,255,255,.05);
+border-radius:50%;
+top:-250px;
+left:-250px;
+animation:float 10s ease-in-out infinite;
+}
+
+body::after{
+content:"";
+position:absolute;
+width:500px;
+height:500px;
+background:rgba(255,255,255,.05);
+border-radius:50%;
+bottom:-200px;
+right:-200px;
+animation:float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float{
+50%{
+transform:translateY(40px);
+}
+}
+
+.icon{
+position:absolute;
+font-size:40px;
+color:rgba(255,255,255,.12);
+animation:updown 5s infinite ease-in-out;
+}
+
+.icon1{
+top:15%;
+left:10%;
+}
+
+.icon2{
+top:20%;
+right:12%;
+}
+
+.icon3{
+bottom:18%;
+left:15%;
+}
+
+.icon4{
+bottom:12%;
+right:15%;
+}
+
+@keyframes updown{
+50%{
+transform:translateY(-20px);
+}
+}
+
+
+.container{
+position:relative;
+z-index:10;
+
+width:90%;
+max-width:700px;
+
+padding:60px 40px;
+
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:30px;
+
+text-align:center;
+
+box-shadow:
+0 20px 50px rgba(0,0,0,.35);
+}
+
+
+.error-code{
+font-size:120px;
+font-weight:700;
+color:#fff;
+line-height:1;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+50%{
+transform:scale(1.05);
+}
+}
+
+.error-code span{
+color:#F7A920;
+}
+
+h2{
+color:#fff;
+margin-top:15px;
+font-size:32px;
+}
+
+p{
+margin-top:15px;
+color:#dbe4ff;
+font-size:16px;
+line-height:1.8;
+}
+
+.home-btn{
+display:inline-flex;
+align-items:center;
+gap:10px;
+
+margin-top:30px;
+
+padding:14px 28px;
+
+background:#F7A920;
+color:#000;
+
+text-decoration:none;
+font-weight:600;
+
+border-radius:50px;
+
+transition:.4s;
+}
+
+.home-btn:hover{
+transform:translateY(-5px);
+box-shadow:
+0 15px 30px rgba(247,169,32,.4);
+}
+
+.search-box{
+margin-top:25px;
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.search-box input{
+padding:12px 15px;
+border:none;
+outline:none;
+border-radius:10px;
+width:300px;
+max-width:100%;
+}
+
+.search-box button{
+padding:12px 18px;
+border:none;
+background:#fff;
+cursor:pointer;
+border-radius:10px;
+font-weight:600;
+}
+
+
+
+@media(max-width:768px){
+
+.error-code{
+font-size:90px;
+}
+
+h2{
+font-size:26px;
+}
+
+.container{
+padding:45px 25px;
+}
+
+}
+
+@media(max-width:480px){
+
+.error-code{
+font-size:70px;
+}
+
+h2{
+font-size:22px;
+}
+
+p{
+font-size:14px;
+}
+
+.home-btn{
+width:100%;
+justify-content:center;
+}
+
+.search-box{
+flex-direction:column;
+}
+
+.search-box input,
+.search-box button{
+width:100%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<i class="ri-government-line icon icon1"></i>
+<i class="ri-building-4-line icon icon2"></i>
+<i class="ri-community-line icon icon3"></i>
+<i class="ri-shield-check-line icon icon4"></i>
+
+<div class="container">
+
+<div class="error-code">
+4<span>0</span>4
+</div>
+
+<h2>Page Not Found</h2>
+
+<p>
+The government service page you are looking for may have been moved,
+removed, or is temporarily unavailable.
+Please return to the Citizen Services Portal homepage.
+</p>
+
+<div class="search-box">
+<input type="text" placeholder="Search Government Services">
+<button>Search</button>
+</div>
+
+<a href="index.html" class="home-btn">
+<i class="ri-home-5-line"></i>
+Back To Home
+</a>
+
+</div>
+
+</body>
+</html>
+
